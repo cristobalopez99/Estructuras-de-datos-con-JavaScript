@@ -14,7 +14,7 @@ class MyQueue {
     peek() {
         return this.top;
     }
-    enQueue(value) {
+    enqueue(value) {
         const newNode = new Node(value);
         if(this.length === 0) {
             this.top = newNode;
@@ -26,7 +26,7 @@ class MyQueue {
         this.length++;
         return this;
     }
-    delQueue() {
+    dequeue() {
         this.top = this.top.next;
         this.length--;
 
